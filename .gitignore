@@ -1,0 +1,21 @@
+# Sorties futures et métadonnées locales
+/.vs/
+/build/
+/out/
+**/Debug/
+**/Release/
+**/ipch/
+**/.svn/
+**/.vs/
+*.suo
+*.user
+*.pdb
+*.ilk
+*.idb
+*.ncb
+*.sdf
+*.opensdf
+*.o
+Thumbs.db
+# Pas de règle *.obj : les maillages OBJ sont des assets nécessaires.
+# Bibliothèques/dll historiques conservées si présentes dans les dépendances.
