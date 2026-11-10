@@ -1,0 +1,96 @@
+#################################################################################
+# ___  ___        _            __  _  _                                         #
+# |  \/  |       | |          / _|(_)| |                                        #
+# | .  . |  __ _ | | __  ___ | |_  _ | |  ___                                   #
+# | |\/| | / _` || |/ / / _ \|  _|| || | / _ \                                  #
+# | |  | || (_| ||   < |  __/| |  | || ||  __/                                  #
+# \_|  |_/ \__,_||_|\_\ \___||_|  |_||_| \___|                                  #
+#                                                                               #
+#  Copyright (c) 2010                                                           #
+#  Author: Dimitri KUDELSKI                                                     #
+#  Contact: kudelski [at] univmed [dot] fr                                      #
+#                                                                               #
+#                                                                               #
+# This program is free software: you can redistribute it and/or modify it under #
+# the terms of the GNU General Public License as published by the Free Software #
+# Foundation, either version 3 of the License, or (at your option) any later    #
+# version.                                                                      #
+#                                                                               #
+# This program is distributed in the hope that it will be useful, but WITHOUT   #
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS #
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more         #
+# details.                                                                      #
+#                                                                               #
+#################################################################################
+
+
+# -------------------------------------------------------------------
+# Environment
+# -------------------------------------------------------------------
+WORKDIR		= .
+SRCDIR		= $(WORKDIR)/src
+INCDIR		= $(WORKDIR)/inc
+LIBDIR		= $(WORKDIR)/lib
+MAKEDIR		= $(WORKDIR)/.make
+# -------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------
+# Files
+# -------------------------------------------------------------------
+SOURCES		= $(wildcard $(SRCDIR)/*.c)
+OBJECTS		= $(SOURCES:$(SRCDIR)/%.c=$(MAKEDIR)/%.o)
+DEPS		= $(SOURCES:$(SRCDIR)/%.c=$(MAKEDIR)/%.d)
+TARGET		= $(LIBDIR)/lib$(PROJECT).a
+# -------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------
+# Compiler and flags
+# -------------------------------------------------------------------
+CC			= gcc
+CFLAGS		= -ansi -pedantic -D_GNU_SOURCE -W -Wall -Werror -ggdb3
+INCPATH		= -I. -I$(INCDIR) -I$(INCDIR)/$(PROJECT)
+# -------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------
+# Rules
+# -------------------------------------------------------------------
+all : $(TARGET)
+
+
+$(TARGET) : $(OBJECTS)
+	@/bin/echo -n "+ Building library '`basename $@`' : "
+	@ar -rcs $@ $^
+	@/bin/echo "OK"
+
+
+$(MAKEDIR)/%.d : $(SRCDIR)/%.c
+	@if [ ! -e $(MAKEDIR) ]; then mkdir $(MAKEDIR); fi
+	@/bin/echo -n "@ Generating dependencies of '`basename $<`' : "
+	@$(CC) $(CFLAGS) $(INCPATH) -MM -MG $< | sed -e 's,^\([^:]*\)\.o[ ]*:,$(MAKEDIR)/\1.o $(MAKEDIR)/\1.d:,' > $@
+	@/bin/echo "OK"
+
+
+$(MAKEDIR)/%.o : $(SRCDIR)/%.c
+	@if [ ! -e $(MAKEDIR) ]; then mkdir $(MAKEDIR); fi
+	@/bin/echo -n "~ Compilation of '`basename $<`' : "
+	@$(CC) $(CFLAGS) $(INCPATH) -c $< -o $@
+	@/bin/echo "OK"
+
+
+clean :
+	@/bin/echo -n "- Deleting : "
+	@rm -f $(MAKEDIR)/*.o $(MAKEDIR)/*.d $(TARGET)
+	@/bin/echo "OK"
+# -------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------
+# Includes
+# -------------------------------------------------------------------
+ifneq ($(MAKECMDGOALS),clean)
+	-include $(DEPS)
+endif
+# -------------------------------------------------------------------

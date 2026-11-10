@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "projects": [
+    {
+      "id": "image-analysis-hough",
+      "name": "Transformation de Hough",
+      "directory": "projects/image-analysis/hough",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "image-analysis-fourier",
+      "name": "Transformée de Fourier",
+      "directory": "projects/image-analysis/fourier",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "image-analysis-inpainting",
+      "name": "Inpainting",
+      "directory": "projects/image-analysis/inpainting",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "image-analysis-chambolle",
+      "name": "Débruitage de Chambolle",
+      "directory": "projects/image-analysis/chambolle",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "image-analysis-block-matching",
+      "name": "Estimation de mouvement par blocs",
+      "directory": "projects/image-analysis/block-matching",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "medical-imaging-ct-segmentation",
+      "name": "Segmentation scanner X",
+      "directory": "projects/medical-imaging/ct-segmentation",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "medical-imaging-region-segmentation",
+      "name": "Segmentation par régions",
+      "directory": "projects/medical-imaging/region-segmentation",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "geometric-modeling-parametric-curves",
+      "name": "Courbes paramétriques",
+      "directory": "projects/geometric-modeling/parametric-curves",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "geometric-modeling-parametric-surfaces",
+      "name": "Surfaces paramétriques",
+      "directory": "projects/geometric-modeling/parametric-surfaces",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "geometric-modeling-mesh-explorer",
+      "name": "Exploration et composantes de maillage",
+      "directory": "projects/geometric-modeling/mesh-explorer",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "subdivision-loop-viewer",
+      "name": "Visualiseur OBJ et subdivision de Loop",
+      "directory": "projects/subdivision/loop-viewer",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "pattern-recognition-mathematical-morphology",
+      "name": "Atelier de morphologie mathématique",
+      "directory": "projects/pattern-recognition/mathematical-morphology",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "pattern-recognition-k-means",
+      "name": "K-means interactif",
+      "directory": "projects/pattern-recognition/k-means",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "image-processing-filters",
+      "name": "Comparaison de filtres",
+      "directory": "projects/image-processing/filters",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "image-processing-edges-and-diffusion",
+      "name": "Contours et diffusion",
+      "directory": "projects/image-processing/edges-and-diffusion",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "scientific-visualization-polygon-operations",
+      "name": "Opérations sur les polygones",
+      "directory": "projects/scientific-visualization/polygon-operations",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "scientific-visualization-rasterization",
+      "name": "Rastérisation et remplissage",
+      "directory": "projects/scientific-visualization/rasterization",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "real-time-rendering-lod-instancing",
+      "name": "LOD, instancing et culling",
+      "directory": "projects/real-time-rendering/lod-instancing",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "real-time-rendering-ocean-lod",
+      "name": "OceanLOD",
+      "directory": "projects/real-time-rendering/ocean-lod",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "physics-dominoes",
+      "name": "Simulation de dominos",
+      "directory": "projects/physics/dominoes",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    },
+    {
+      "id": "desktop-drawing",
+      "name": "Dessin Qt",
+      "directory": "projects/desktop/drawing",
+      "status": "sources-importees",
+      "executable": null,
+      "workingDirectory": null
+    }
+  ]
+}

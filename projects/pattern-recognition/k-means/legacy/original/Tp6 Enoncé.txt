@@ -1,0 +1,5 @@
+1°) tirage au sort de k représentants (utilisé Time.h : srand (time(NULL); TabCentre[i].x = rand()%largeur;)
+
+2°) Affectation des classes sur critères de distances
+
+3°)Mise à jour des représentants par rapport aux barycentre jusqu'à idempotence

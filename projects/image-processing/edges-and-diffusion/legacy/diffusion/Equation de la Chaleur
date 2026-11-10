@@ -1,0 +1,9 @@
+Pour t=1->N 
+	Pour tout pixel de IN
+	{
+		IN(x,y) = IN(x,y) + Delta(T)*Delta(IN)(x,y)
+		filtreTp6(IN)
+			|_>(x,y)
+	}
+0<Delta(t)<1
+N=100

@@ -1,0 +1,9 @@
+si les points voisin sont < |delta| et que tu as changement de signe
+Zog Zog! dit :
+le passage par zéro se trouve entre les 2 pixels
+Zog Zog! dit :
+et le changement est négligeable
+Zog Zog! dit :
+alors que si il est > |delta|
+Zog Zog! dit :
+la c'est un pixel de contour

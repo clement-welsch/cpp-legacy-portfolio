@@ -1,0 +1,7 @@
+Morphomath sur images en niveau de gris
+
+Erosion : Min du voisinage
+Dilatation : Max du voisinage
+Fermeture + Ouverture
+Top Hat : Im - ouverture= out 
+

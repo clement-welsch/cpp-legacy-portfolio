@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>906</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="viewMode">
+       <enum>QMdiArea::TabbedView</enum>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>906</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <widget class="QMenu" name="menuOuvrir_les_fichiers_recents">
+     <property name="title">
+      <string>Ouvrir les fichiers récents</string>
+     </property>
+     <addaction name="actionFichier_drw"/>
+    </widget>
+    <addaction name="actionNouveau"/>
+    <addaction name="actionOuvrir"/>
+    <addaction name="actionOuvrir_sous"/>
+    <addaction name="menuOuvrir_les_fichiers_recents"/>
+    <addaction name="separator"/>
+    <addaction name="actionFermer"/>
+    <addaction name="actionTout_Fermer"/>
+    <addaction name="actionEnregistrer"/>
+    <addaction name="actionEnregistrer_sous"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuEdition">
+    <property name="title">
+     <string>Edition</string>
+    </property>
+    <addaction name="actionAnnuler"/>
+    <addaction name="actionAller_vers_l_avant"/>
+    <addaction name="actionAller_vers_l_arriere"/>
+    <addaction name="separator"/>
+    <addaction name="actionCouper"/>
+    <addaction name="actionCopier"/>
+    <addaction name="actionColler"/>
+    <addaction name="actionColler_2"/>
+    <addaction name="actionEffacer"/>
+    <addaction name="separator"/>
+    <addaction name="actionPr_f_rences"/>
+   </widget>
+   <widget class="QMenu" name="menuImage">
+    <property name="title">
+     <string>Image</string>
+    </property>
+    <addaction name="actionMode"/>
+    <addaction name="separator"/>
+    <addaction name="actionR_glages"/>
+    <addaction name="separator"/>
+    <addaction name="actionTaille_de_l_image"/>
+    <addaction name="actionRotation_de_l_image"/>
+    <addaction name="separator"/>
+    <addaction name="actionDupliquer"/>
+   </widget>
+   <widget class="QMenu" name="menuCalque">
+    <property name="title">
+     <string>Calque</string>
+    </property>
+    <addaction name="actionNouveau_calque"/>
+    <addaction name="actionDupliquer_le_calque"/>
+    <addaction name="actionSupprimer"/>
+    <addaction name="separator"/>
+    <addaction name="actionRenommer_le_calque"/>
+    <addaction name="actionStyle_de_Calque"/>
+    <addaction name="separator"/>
+    <addaction name="actionFusssionner_les_calques"/>
+    <addaction name="actionFussionner_les_calques_visibles"/>
+   </widget>
+   <widget class="QMenu" name="menuSelection">
+    <property name="title">
+     <string>Sélection</string>
+    </property>
+    <addaction name="actionTout_selectionner"/>
+    <addaction name="actionDeselectionner"/>
+    <addaction name="actionReselectionner"/>
+    <addaction name="separator"/>
+    <addaction name="actionTous_les_calques"/>
+    <addaction name="actionDeselectionner_les_calques"/>
+   </widget>
+   <widget class="QMenu" name="menuFiltre">
+    <property name="title">
+     <string>Filtre</string>
+    </property>
+    <addaction name="actionAttenuation"/>
+    <addaction name="actionBruit"/>
+    <addaction name="actionDeformation"/>
+    <addaction name="actionEsthetiques"/>
+    <addaction name="actionPixellisation"/>
+    <addaction name="actionRendu"/>
+    <addaction name="actionRenforcement"/>
+    <addaction name="actionVideo"/>
+    <addaction name="actionDivers"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <widget class="QMenu" name="menuMode_d_affichage">
+     <property name="title">
+      <string>Mode d'affichage</string>
+     </property>
+     <addaction name="actionRien"/>
+    </widget>
+    <addaction name="actionZoom_Avant"/>
+    <addaction name="actionZoom_Arriere"/>
+    <addaction name="actionTaille_Ecran"/>
+    <addaction name="actionTaille_reel_des_pixels"/>
+    <addaction name="separator"/>
+    <addaction name="menuMode_d_affichage"/>
+    <addaction name="separator"/>
+    <addaction name="actionRegles"/>
+   </widget>
+   <widget class="QMenu" name="menuFenetre">
+    <property name="title">
+     <string>Fenêtre</string>
+    </property>
+    <addaction name="actionCalques"/>
+    <addaction name="actionCouleurs"/>
+    <addaction name="actionHistorique"/>
+   </widget>
+   <widget class="QMenu" name="menuAide">
+    <property name="title">
+     <string>Aide</string>
+    </property>
+    <addaction name="actionAide_Dessin"/>
+    <addaction name="actionA_propos_de_Dessin"/>
+    <addaction name="actionA_propos_de_Qt"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuEdition"/>
+   <addaction name="menuImage"/>
+   <addaction name="menuCalque"/>
+   <addaction name="menuSelection"/>
+   <addaction name="menuFiltre"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuFenetre"/>
+   <addaction name="menuAide"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>1</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <widget class="QPushButton" name="pBSelection">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Selection</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBPipette">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>40</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pipette</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBPinceau">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>90</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pinceau</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBGomme">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gomme</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBDegrade">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>130</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dégradé</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBPeinture">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>150</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Peinture</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBTexte">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>200</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Texte</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBCarre">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>220</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Carré</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBEllipse">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>240</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ellipse</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBLoupe">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>290</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Loupe</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBDeplacement">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Deplacement</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>70</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>180</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>270</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBColor1">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>340</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Couleur 1</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>320</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pBColor2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>360</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Couleur 2</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_Right">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>88</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <spacer name="verticalSpacer_10">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>150</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_Layout">
+        <attribute name="title">
+         <string>Calques</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_Traces">
+        <attribute name="title">
+         <string>Tracés</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_Couches">
+        <attribute name="title">
+         <string>Couches</string>
+        </attribute>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionNouveau">
+   <property name="text">
+    <string>Nouveau...</string>
+   </property>
+  </action>
+  <action name="actionOuvrir">
+   <property name="text">
+    <string>Ouvrir...</string>
+   </property>
+  </action>
+  <action name="actionOuvrir_sous">
+   <property name="text">
+    <string>Ouvrir sous...</string>
+   </property>
+  </action>
+  <action name="actionFichier_drw">
+   <property name="text">
+    <string>Fichier.drw</string>
+   </property>
+  </action>
+  <action name="actionFermer">
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+  </action>
+  <action name="actionTout_Fermer">
+   <property name="text">
+    <string>Tout Fermer</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer">
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_sous">
+   <property name="text">
+    <string>Enregistrer sous...</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionAnnuler">
+   <property name="text">
+    <string>Annuler</string>
+   </property>
+  </action>
+  <action name="actionAller_vers_l_avant">
+   <property name="text">
+    <string>Aller vers l'avant</string>
+   </property>
+  </action>
+  <action name="actionAller_vers_l_arriere">
+   <property name="text">
+    <string>Aller vers l'arrière</string>
+   </property>
+  </action>
+  <action name="actionCouper">
+   <property name="text">
+    <string>Couper</string>
+   </property>
+  </action>
+  <action name="actionCopier">
+   <property name="text">
+    <string>Copier</string>
+   </property>
+  </action>
+  <action name="actionColler">
+   <property name="text">
+    <string>Copier avec Fusion</string>
+   </property>
+  </action>
+  <action name="actionColler_2">
+   <property name="text">
+    <string>Coller</string>
+   </property>
+  </action>
+  <action name="actionEffacer">
+   <property name="text">
+    <string>Effacer</string>
+   </property>
+  </action>
+  <action name="actionPr_f_rences">
+   <property name="text">
+    <string>Préférences</string>
+   </property>
+  </action>
+  <action name="actionMode">
+   <property name="text">
+    <string>Mode</string>
+   </property>
+  </action>
+  <action name="actionR_glages">
+   <property name="text">
+    <string>Réglages</string>
+   </property>
+  </action>
+  <action name="actionTaille_de_l_image">
+   <property name="text">
+    <string>Taille de l'image</string>
+   </property>
+  </action>
+  <action name="actionRotation_de_l_image">
+   <property name="text">
+    <string>Rotation de l'image</string>
+   </property>
+  </action>
+  <action name="actionDupliquer">
+   <property name="text">
+    <string>Dupliquer</string>
+   </property>
+  </action>
+  <action name="actionNouveau_calque">
+   <property name="text">
+    <string>Nouveau</string>
+   </property>
+  </action>
+  <action name="actionDupliquer_le_calque">
+   <property name="text">
+    <string>Dupliquer le calque...</string>
+   </property>
+  </action>
+  <action name="actionSupprimer">
+   <property name="text">
+    <string>Supprimer</string>
+   </property>
+  </action>
+  <action name="actionRenommer_le_calque">
+   <property name="text">
+    <string>Renommer le calque</string>
+   </property>
+  </action>
+  <action name="actionStyle_de_Calque">
+   <property name="text">
+    <string>Style de calque</string>
+   </property>
+  </action>
+  <action name="actionFusssionner_les_calques">
+   <property name="text">
+    <string>Fussionner les calques</string>
+   </property>
+  </action>
+  <action name="actionFussionner_les_calques_visibles">
+   <property name="text">
+    <string>Fussionner les calques visibles</string>
+   </property>
+  </action>
+  <action name="actionTout_selectionner">
+   <property name="text">
+    <string>Tout sélectionner</string>
+   </property>
+  </action>
+  <action name="actionDeselectionner">
+   <property name="text">
+    <string>Déselectionner</string>
+   </property>
+  </action>
+  <action name="actionReselectionner">
+   <property name="text">
+    <string>Reselectionner</string>
+   </property>
+  </action>
+  <action name="actionTous_les_calques">
+   <property name="text">
+    <string>Tous les calques</string>
+   </property>
+  </action>
+  <action name="actionDeselectionner_les_calques">
+   <property name="text">
+    <string>Déselectionner les calques</string>
+   </property>
+  </action>
+  <action name="actionAttenuation">
+   <property name="text">
+    <string>Atténuation</string>
+   </property>
+  </action>
+  <action name="actionBruit">
+   <property name="text">
+    <string>Bruit</string>
+   </property>
+  </action>
+  <action name="actionDeformation">
+   <property name="text">
+    <string>Déformation</string>
+   </property>
+  </action>
+  <action name="actionEsthetiques">
+   <property name="text">
+    <string>Esthétiques</string>
+   </property>
+  </action>
+  <action name="actionPixellisation">
+   <property name="text">
+    <string>Pixellisation</string>
+   </property>
+  </action>
+  <action name="actionRendu">
+   <property name="text">
+    <string>Rendu</string>
+   </property>
+  </action>
+  <action name="actionRenforcement">
+   <property name="text">
+    <string>Renforcement</string>
+   </property>
+  </action>
+  <action name="actionVideo">
+   <property name="text">
+    <string>Vidéo</string>
+   </property>
+  </action>
+  <action name="actionDivers">
+   <property name="text">
+    <string>Divers</string>
+   </property>
+  </action>
+  <action name="actionZoom_Avant">
+   <property name="text">
+    <string>Zoom Avant</string>
+   </property>
+  </action>
+  <action name="actionZoom_Arriere">
+   <property name="text">
+    <string>Zoom Arrière</string>
+   </property>
+  </action>
+  <action name="actionTaille_Ecran">
+   <property name="text">
+    <string>Taille écran</string>
+   </property>
+  </action>
+  <action name="actionTaille_reel_des_pixels">
+   <property name="text">
+    <string>Taille réel des pixels</string>
+   </property>
+  </action>
+  <action name="actionRien">
+   <property name="text">
+    <string>Rien</string>
+   </property>
+  </action>
+  <action name="actionRegles">
+   <property name="text">
+    <string>Règles</string>
+   </property>
+  </action>
+  <action name="actionCalques">
+   <property name="text">
+    <string>Calques</string>
+   </property>
+  </action>
+  <action name="actionCouleurs">
+   <property name="text">
+    <string>Couleurs</string>
+   </property>
+  </action>
+  <action name="actionHistorique">
+   <property name="text">
+    <string>Historique</string>
+   </property>
+  </action>
+  <action name="actionAide_Dessin">
+   <property name="text">
+    <string>Aide Dessin</string>
+   </property>
+  </action>
+  <action name="actionA_propos_de_Dessin">
+   <property name="text">
+    <string>A propos de Dessin</string>
+   </property>
+  </action>
+  <action name="actionA_propos_de_Qt">
+   <property name="text">
+    <string>A propos de Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>Button1Released()</slot>
+ </slots>
+</ui>

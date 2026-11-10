@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ode", "./ode.vcproj", "{39FC1F19-114E-934F-9773-21CB23A91D8D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugSingleDLL|Win32 = DebugSingleDLL|Win32
+		ReleaseSingleDLL|Win32 = ReleaseSingleDLL|Win32
+		DebugSingleLib|Win32 = DebugSingleLib|Win32
+		ReleaseSingleLib|Win32 = ReleaseSingleLib|Win32
+		DebugDoubleDLL|Win32 = DebugDoubleDLL|Win32
+		ReleaseDoubleDLL|Win32 = ReleaseDoubleDLL|Win32
+		DebugDoubleLib|Win32 = DebugDoubleLib|Win32
+		ReleaseDoubleLib|Win32 = ReleaseDoubleLib|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugSingleDLL|Win32.ActiveCfg = DebugSingleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugSingleDLL|Win32.Build.0 = DebugSingleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseSingleDLL|Win32.ActiveCfg = ReleaseSingleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseSingleDLL|Win32.Build.0 = ReleaseSingleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugSingleLib|Win32.ActiveCfg = DebugSingleLib|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugSingleLib|Win32.Build.0 = DebugSingleLib|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseSingleLib|Win32.ActiveCfg = ReleaseSingleLib|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseSingleLib|Win32.Build.0 = ReleaseSingleLib|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugDoubleDLL|Win32.ActiveCfg = DebugDoubleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugDoubleDLL|Win32.Build.0 = DebugDoubleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseDoubleDLL|Win32.ActiveCfg = ReleaseDoubleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseDoubleDLL|Win32.Build.0 = ReleaseDoubleDLL|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugDoubleLib|Win32.ActiveCfg = DebugDoubleLib|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.DebugDoubleLib|Win32.Build.0 = DebugDoubleLib|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseDoubleLib|Win32.ActiveCfg = ReleaseDoubleLib|Win32
+		{39FC1F19-114E-934F-9773-21CB23A91D8D}.ReleaseDoubleLib|Win32.Build.0 = ReleaseDoubleLib|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
